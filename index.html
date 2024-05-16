@@ -44,7 +44,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        display: flex;
+        display: none;
         justify-content: center;
         align-items: center;
         background: url('./img/startScreenBackground.png');
@@ -61,6 +61,7 @@
                     <img src="./img/button.png" alt="Start button">
                     <span
                     style="
+
                     position: absolute;
                     color: white;
                     top: 50%;
@@ -72,12 +73,35 @@
             </div>
         </div><!-- Fim startScreen -->
 
-        <div id="restartScreen">
+        <div 
+        id="restartScreen"
+        style="
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background: url('./img/startScreenBackground.png');
+            z-index: 20;
+            background-size: contain;
+            background-repeat: no-repeat;
+            display: flex;
+        ">
             <div>
-                <h1>Game Over</h1>
-                <div id="restartButton">
-                    <img src="./img/button.png" alt="Restart Button">
-                    <span>Reiniciar</span>
+                <h1 style="color: white;">Game Over</h1>
+                <div 
+                id="restartButton"
+                style="position: relative; display: inline-block; cursor: pointer;"
+                >
+                    <img src="./img/button.png" alt="Restart Button"/>
+                    <span 
+                    style="position: absolute;
+                    color: white;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);"
+                    
+                    >Reiniciar</span>
                 </div>
             </div>
         </div><!-- Fim restartScreen -->
