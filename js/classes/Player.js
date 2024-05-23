@@ -33,9 +33,34 @@ class Player {
       this.image,
       player.position.x,
       player.position.y,
-      player.width,
-      player.height
+      this.width,
+      this.height
     );
     c.restore();
+  }
+  update() {
+    if (!this.image) return;
+    this.draw();
+    this.position.x += this.velocity.x;
+    if (this.opacity !== 1) return;
+    this.frame++;
+    if (this.frame % 2 === 0) {
+      this.particle.push(
+        new this.particle({
+          position: {
+            x: this.position.x + this.width / 2,
+            y: this.position.y + this.height
+          },
+          velocity: {
+            x: (Math.round() - 0.5) * 1.5,
+            y: 1.4
+          },
+          radius: Math.random() * 2,
+          color: "white",
+          fades: true
+        })
+      );
+      this.frames = 0;
+    }
   }
 }
