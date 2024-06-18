@@ -3,11 +3,11 @@
     "semi": true,
     "trailingComma": "none",
     "overrides": [
-        {
-            "files": "*.html",
-            "options": {
-                "parser": "html"
-            }
+      {
+        "files": "*.html",
+        "options": {
+          "parser": "html"
         }
+      }
     ]
-}
+  }
